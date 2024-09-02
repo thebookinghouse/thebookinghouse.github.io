@@ -1,0 +1,982 @@
+/* General Styles */
+
+.preload {
+  opacity: 0;
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards; /* Adjust duration as needed */
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards; /* Adjust duration as needed */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #f3f4f6;
+  background-color: #030712;
+  overflow-x: hidden;
+  font-size: 16px; /* Base font size */
+  line-height: 1.6; /* Line height for readability */
+}
+
+/* Header styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700; /* Default weight for headers */
+  margin: 0 0 1rem 0; /* Margin below headers */
+}
+
+h1 {
+  font-size: 3rem; /* Larger size for main title */
+  line-height: 1.2; /* Line height for wrapping */
+}
+
+h2 {
+  font-size: 2.2rem; /* Larger size for subheading */
+}
+
+h3 {
+  font-size: 1.75rem; /* Medium size for sub-subheading */
+}
+
+h4 {
+  font-size: 1.5rem; /* Smaller size for less prominent headings */
+}
+
+h5 {
+  font-size: 1.25rem; /* Smaller size for less prominent headings */
+}
+
+h6 {
+  font-size: 1rem; /* Smallest size for headings */
+}
+
+/* Paragraphs and text */
+p {
+  font-size: 1rem; /* Standard paragraph size */
+  margin: 0 0 1rem 0; /* Margin below paragraphs */
+}
+
+a {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 1.5rem; /* Indentation for lists */
+  margin: 0 0 1rem 0; /* Margin below lists */
+}
+
+li {
+  margin-bottom: 0.5rem; /* Margin between list items */
+}
+
+/* Buttons */
+button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500; /* Medium weight for buttons */
+  font-size: 1rem; /* Button text size */
+  padding: 0.5rem 1rem; /* Padding inside buttons */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  background-color: #575afd; /* Button background color */
+  color: #fff; /* Button text color */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4a4dff; /* Darker shade on hover */
+}
+
+/* Forms */
+input, textarea, select {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem; /* Input font size */
+  padding: 0.5rem; /* Padding inside form elements */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  width: 100%; /* Full width of container */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #575afd; /* Border color on focus */
+  outline: none; /* Remove default focus outline */
+}
+
+/* Layout */
+.container {
+  width: 90%;
+  max-width: 1200px; /* Maximum width for large screens */
+  margin: 0 auto; /* Center the container */
+}
+
+section {
+  padding: 2rem 0; /* Padding for sections */
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  padding: 20px 0; /* Reduced padding */
+  background-color: #030712; /* Match body background color */
+}
+
+.header h1 {
+  font-size: 2.5rem; /* Smaller font size */
+  margin-bottom: 10px;
+}
+
+.subheader {
+  color: #d1d5db;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-primary {
+  background-color: #575afd;
+  color: #fefcff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #0f132a;
+  color: #6077fe;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Layout */
+.container {
+  width: 90%;
+  max-width: 1200px; /* Maximum width for large screens */
+  margin: 0 auto; /* Center the container */
+}
+
+section {
+  padding: 2rem 0; /* Padding for sections */
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  padding: 20px 0; /* Reduced padding */
+  background-color: #030712; /* Match body background color */
+}
+
+.header h1 {
+  font-size: 3rem; /* Larger font size */
+  line-height: 1.2; /* Adjust line height for wrapping */
+}
+
+.subheader {
+  color: #d1d5db;
+  font-size: 1.2rem; /* Slightly larger for emphasis */
+  margin-bottom: 30px;
+  line-height: 1.5; /* Adjust line height for wrapping */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: transparent;
+  padding: 10px 0;
+  position: relative;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  color: #f3f4f6;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center; /* Align vertically in the center */
+  list-style: none;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a {
+  color: #f3f4f6;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Navbar Styling */
+.navbar {
+  padding: 20px 0;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #575afd;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #f3f4f6;
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px; /* Adjusted size for better visibility */
+  height: 25px;
+  cursor: pointer;
+  position: fixed; /* Fixed positioning to stay on top */
+  top: 30px;
+  right: 20px;
+  z-index: 1100; /* Ensure it stays on top */
+}
+
+.burger-bar {
+  height: 4px; /* Adjusted for visibility */
+  background-color: #f3f4f6;
+  border-radius: 2px;
+}
+
+/* Responsive Styles */
+@media (max-width: 902px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed; /* Fixed positioning for the menu */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(15, 19, 42, 0.95); /* Dark overlay */
+    justify-content: center;
+    z-index: 1000; /* Ensure it's above the blur */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease-in-out; /* Fade-in effect */
+    overflow: hidden; /* Prevent scrolling */
+  }
+
+  .nav-links.active {
+    display: flex;
+    opacity: 1; /* Make visible when active */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    z-index: 1100; /* Ensure menu items are above the blur */
+  }
+
+  /* Show burger menu on smaller screens */
+  .burger-menu {
+    display: flex;
+  }
+
+  /* Background blur effect */
+  .blur-bg {
+    filter: blur(10px); /* More intense blur */
+    background-color: rgba(3, 7, 18, 0.7); /* Blur with specific color */
+    position: fixed; /* Fixed positioning */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 900; /* Ensure blur is beneath the menu */
+    pointer-events: none; /* Allow clicks to pass through */
+  }
+
+  /* Ensure background blur is only applied when menu is active */
+  .body-no-scroll .blur-bg {
+    display: block; /* Show blur effect */
+  }
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.arrow-down {
+  font-size: 0.8rem; /* Adjust size as needed */
+  margin-left: 5px; /* Space between text and arrow */
+}
+
+/* Optional: style for dropdown when expanded */
+.dropdown-menu {
+  opacity: 0; /* Start as invisible */
+  visibility: hidden; /* Hide the element */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0f132a;
+  padding: 10px 0;
+  list-style: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure dropdown is on top */
+  transform: translateY(10px); /* Initial position for smooth transition */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for opacity and transform */
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu a {
+  color: #f3f4f6;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  color: #575afd;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Make the element visible */
+  transform: translateY(0); /* Move to the final position */
+}
+
+.search-icon, .mode-toggle {
+  color: #f3f4f6;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.search-icon:hover, .mode-toggle:hover {
+  color: #575afd;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+  .navbar-container {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+  }
+}
+
+/* Features Section */
+.features {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.features h3 {
+  font-size: 2.2rem; /* Slightly larger for emphasis */
+  margin-bottom: 40px;
+  color: #f3f4f6;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: left;
+}
+
+.feature-card {
+  color: #f3f4f6;
+  padding: 20px;
+}
+
+.icon-circle {
+  background-color: #1b174f;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon-circle i {
+  font-size: 20px; /* Thinner icons */
+  color: #f3f4f6;
+}
+
+.feature-card h4 {
+  font-size: 1.6rem; /* Slightly larger text */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.feature-card p {
+  font-size: 0.9rem; /* Smaller text */
+  color: #d1d5db;
+  margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+  .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .features-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Details section styling */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  grid-template-rows: repeat(2, auto); /* Two rows layout */
+  gap: 30px; /* Increased gap between items */
+  grid-template-areas:
+    "simplified-panel unlimited-ness"
+    "in-depth-support advanced-security"; /* Updated for 4 cards in 2 rows */
+}
+
+.detail-card {
+  display: flex;
+  align-items: flex-start; /* Align items to the left */
+  gap: 20px; /* Space between icon and text */
+  margin: 0 0 30px 0; /* Margin below each card */
+  text-align: left; /* Ensure text aligns to the left */
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px; /* Size of the background circle */
+  height: 80px; /* Size of the background circle */
+  background-color: #1b174f; /* Background circle color */
+  border-radius: 50%; /* Circle shape */
+  color: #575afd; /* Icon color */
+  font-size: 36px; /* Size of the icon */
+}
+
+.text {
+  flex: 1; /* Allows text to take up remaining space */
+  text-align: left; /* Align text to the left */
+}
+
+.simplified-panel {
+  grid-area: simplified-panel;
+}
+
+.unlimited-ness {
+  grid-area: unlimited-ness;
+}
+
+.in-depth-support {
+  grid-area: in-depth-support;
+}
+
+.advanced-security {
+  grid-area: advanced-security;
+}
+
+@media (max-width: 1008px) {
+  .details-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+    grid-template-rows: auto; /* Adjust rows automatically */
+    grid-template-areas:
+      "simplified-panel"
+      "unlimited-ness"
+      "in-depth-support"
+      "advanced-security"; /* Updated for 4 cards in a single column */
+  }
+
+  .detail-card {
+    flex-direction: row; /* Keep items in a row */
+    align-items: flex-start; /* Left align on smaller screens */
+    text-align: left; /* Align text left */
+  }
+
+  .icon {
+    margin-bottom: 0; /* Remove margin below icon */
+  }
+}
+
+.details h3 {
+  color: #f3f4f6;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-align: left; /* Align heading text to the left */
+}
+
+.details p {
+  color: #d1d5db;
+  text-align: left; /* Align paragraph text to the left */
+}
+
+
+/* Pricing Section */
+.pricing {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.pricing h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #f3f4f6;
+}
+
+.pricing p {
+  color: #d1d5db;
+  margin-bottom: 30px;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* Enable wrapping on smaller screens */
+}
+
+.price-card {
+  background-color: #030712;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 40px 30px;
+  width: 300px;
+  color: #f3f4f6;
+  position: relative;
+  transition: all 0.3s ease; /* Smooth transition when resizing */
+}
+
+.price-card.popular {
+  border: 2px solid #575afd;
+}
+
+.price-card h4 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #f3f4f6;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.price-value {
+  font-size: 3rem;
+}
+
+.price-duration {
+  font-size: 1.2rem;
+  color: #d1d5db;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #575afd;
+  margin: 20px 0;
+}
+
+.price-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.price-card ul li {
+  margin-bottom: 10px;
+  color: #d1d5db;
+  font-size: 1rem;
+}
+
+.card-button {
+  background-color: #1b174f;
+  color: #6077fe;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.card-button:hover {
+  background-color: #6077fe;
+  color: #fefcff;
+}
+
+.popular-button {
+  background-color: #575afd;
+  color: #fefcff;
+}
+
+.popular-button:hover {
+  background-color: #6077fe;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #0c0f29;
+  color: #5746cd;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+.no-fees {
+  font-size: 1.2rem;
+  color: #f3f4f6;
+}
+
+.no-fees span {
+  margin-right: 10px;
+  color: #6077fe;
+}
+
+/* Stacking cards on smaller screens */
+@media (max-width: 900px) {
+  .pricing-cards {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards when stacked */
+  }
+
+  .price-card {
+    width: 100%; /* Make each card take full width on smaller screens */
+    max-width: 400px; /* Set a max width so it doesn't stretch too wide */
+    margin-bottom: 20px; /* Add margin between stacked cards */
+  }
+}
+
+/* Reset to normal layout on larger screens */
+@media (min-width: 901px) {
+  .pricing-cards {
+    flex-direction: row; /* Keep cards in a row on larger screens */
+  }
+
+  .price-card {
+    width: 300px; /* Return to original card width */
+    margin-bottom: 0; /* Remove margin between cards */
+  }
+}
+
+
+/* Footer */
+.footer {
+  padding: 20px 0;
+  text-align: center;
+
+}
+
+.footer p {
+  font-size: 0.9rem;
+}
+
+.review-container {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.review-card {
+  padding: 0px;
+  border-radius: 0px;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stars {
+  font-size: 24px;
+  color: #5c6bc0;
+  margin-bottom: 15px;
+}
+
+.review-text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #2f3241;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.user-type {
+  font-size: 12px;
+  color: #b0b0b0;
+}
+/* Media Query for screens below 902px */
+@media (max-width: 1071px) {
+  .review-container {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+  }
+
+  .review-card {
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .review-card {
+    padding: 25px;
+    border-radius: 0px;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+}
+/* Contact Section */
+.contact-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact-section h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff; /* Corrected text color */
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto; /* Center the form */
+  padding: 20px;
+  background-color: #0f132a; /* Dark background for the form */
+  border: 1px solid #0f132a; /* Matching border color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Contact Form Elements */
+.contact-form input, 
+.contact-form textarea {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #ffffff; /* Default border color */
+  border-radius: 4px; /* Rounded corners */
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  margin-bottom: 15px; /* Space between form elements */
+  background-color: #0f132a; /* Background color */
+  color: #ffffff; /* Text color */
+  transition: border-color 0.5s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Placeholder text styling */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #ffffff; /* Placeholder text color */
+}
+
+/* Input and textarea focus styles */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #575afd; /* Border color on focus */
+  outline: none; /* Remove default focus outline */
+  background-color: #0f132a; /* Maintain background color on focus */
+}
+
+/* Button styling */
+.contact-form button {
+  color: #ffffff; /* White text color */
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #4a4cda; /* Change background color on hover */
+}
+
+/* Contact Info Section */
+.contact-info {
+  padding: 60px 20px; /* Add vertical padding and some horizontal padding */
+
+  color: #ffffff; /* White text color for contrast */
+}
+
+.contact-info .container {
+  max-width: 800px; /* Max width of container */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Padding inside the container */
+  border-radius: 8px; /* Rounded corners */
+  background: #0f132a; /* Light white background with some transparency */
+  backdrop-filter: blur(10px); /* Slight blur effect for a modern touch */
+}
+
+.contact-info h2 {
+  font-size: 2rem; /* Larger font size for the heading */
+  margin-bottom: 30px; /* Space below the heading */
+  text-align: center; /* Center align the heading */
+  color: #ffffff; /* White text color */
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center items horizontally */
+  text-align: center; /* Center text within the boxes */
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.info-item:hover {
+  background-color: #24294b; /* Darker background on hover */
+  transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+.info-item i {
+  font-size: 1.8rem; /* Increase icon size slightly for emphasis */
+  margin-right: 20px; /* More space between icon and text */
+  color: #5a8ec1; /* Softer blue color for icons */
+}
+
+.info-item p {
+  margin: 0; /* Remove default margin */
+  font-size: 1.1rem; /* Slightly larger font size for readability */
+}
+
+.info-item a {
+  color: #ffffff; /* White color for links */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.info-item a:hover {
+  color: #4a6fa5; /* Slightly lighter blue color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .info-item {
+    flex-direction: column; /* Stack icon and text vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .info-item i {
+    margin-bottom: 10px; /* Space between icon and text */
+  }
+}
+
+.counters {
+  display: flex;
+  justify-content: center; /* Distributes items evenly with equal space around them */
+  padding: 50px 0;
+  text-align: center;
+}
+
+.counter-item {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #575afd; /* Blue color */
+  margin: 0 30px; /* Adjusts horizontal spacing between items */
+}
+
+.counter-item p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #ffffff;
+}
